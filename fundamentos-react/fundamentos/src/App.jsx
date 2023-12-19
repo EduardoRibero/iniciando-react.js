@@ -1,8 +1,8 @@
 //COmponentes:
-
 import FirstComponente from "./componentes/FirstComponente"
 import SecondComponente from "./componentes/SecondComponente"
-import ThirdComponente from "./componentes/ThirdComponente";
+import ThirdComponente from "./componentes/ThirdComponente"
+import TemplateExpressions from "./componentes/TemplateExplessions"
 import './App.css';
 
 function App() {
@@ -13,6 +13,8 @@ function App() {
       <SecondComponente/>
       <hr />
       <ThirdComponente/>
+      <hr /> 
+      <TemplateExpressions/>
     </div>
   );
 }
