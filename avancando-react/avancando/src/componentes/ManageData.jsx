@@ -9,8 +9,10 @@ const ManageData = () => {
 
   return (
     <div>
+      
+        <h1>useState na prática</h1>
 
-        <h1>Valor:{number}</h1>
+        <h2>Valor:{number}</h2>
 
         <button onClick={() => setNumber(15)}>Alterar</button>
 
