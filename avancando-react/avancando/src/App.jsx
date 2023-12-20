@@ -9,6 +9,12 @@ import { useState } from "react";
 import CarDetals from "./componentes/CarDetals";
 
 function App() {
+  const veiculos = [
+    {brand:"prisma", km: 32.000, color: "vermelho"},
+    {brand:"uno", km: 92.000, color: "branco"},
+    {brand:"corsa", km: 72.000, color: "preto"}
+  ]
+
   const name = "tiago"
   const [altura] = useState("1.67")
 
@@ -52,6 +58,13 @@ function App() {
     {/*Destructuring em props*/}
     <div>
     <CarDetals brand="BMW" km={10.000} color="blue"/>
+    </div>
+
+    {/*Renderização de listas em componentes*/}
+    <div>
+    {veiculos.map((veiculo) =>(
+      <CarDetals brand={veiculo.brand} km={veiculo.km} color={veiculo.color}/>
+    ))}
     </div>
 
     </div>
