@@ -6,8 +6,13 @@ import City from "./assets/city.jpg";
 import './App.css';
 import ListRender from "./componentes/ListRender";
 import ConditionalRender from "./componentes/ConditionalRender";
+import ShowUserName from "./componentes/ShowUserName";
+import { useState } from "react";
 
 function App() {
+  const name = "tiago"
+  const [altura] = useState("1.67")
+  
   return (
     <div className="App">
 
@@ -37,6 +42,12 @@ function App() {
     <div>
     <ConditionalRender/>
     </div>
+
+    {/*Props*/}
+    <div>
+      <ShowUserName name={name} idade="22" altura={altura}/>
+    </div>
+
     </div>
   );
 }
