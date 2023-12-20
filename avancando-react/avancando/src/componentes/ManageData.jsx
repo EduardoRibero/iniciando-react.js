@@ -3,7 +3,8 @@
 import { useState } from "react"
 
 const ManageData = () => {
-
+    
+    //useStates
     const [number, setNumber] = useState(10)
 
   return (
@@ -12,7 +13,7 @@ const ManageData = () => {
         <h1>Valor:{number}</h1>
 
         <button onClick={() => setNumber(15)}>Alterar</button>
-        
+
     </div>
   )
 

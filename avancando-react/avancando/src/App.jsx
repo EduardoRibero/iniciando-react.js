@@ -1,10 +1,11 @@
 //Componentes:
-import ManageData from "./componentes/ManageData"
+import ManageData from "./componentes/ManageData";
 
 
-import City from "./assets/city.jpg"
+import City from "./assets/city.jpg";
 import './App.css';
 import ListRender from "./componentes/ListRender";
+import ConditionalRender from "./componentes/ConditionalRender";
 
 function App() {
   return (
@@ -32,6 +33,10 @@ function App() {
       <ListRender/>
     </div>
 
+    {/*Renderização condicional*/}
+    <div>
+    <ConditionalRender/>
+    </div>
     </div>
   );
 }

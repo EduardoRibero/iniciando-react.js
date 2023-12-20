@@ -1,10 +1,11 @@
 //rafce para criar um componente
 
-import {useState} from "react"
+import { useState } from "react"
 
 const ListRender = () => {
 
-    const [list] = useState([
+    //useState
+    const [list, setList] = useState([
         {
             name:"Roberto",
             id: 1
@@ -17,9 +18,20 @@ const ListRender = () => {
 
         {
             name:"Giovana",
-            id: 4
+            id: 3
         }
     ])
+
+    const deleteRandom = () => {
+        const numberRandom = Math.floor(Math.random() * 4)
+
+        setList((prevList) => {
+
+            return prevList.filter((list) => numberRandom !== list.id)
+
+        })
+
+    }
 
   return (
     <div>
@@ -28,6 +40,7 @@ const ListRender = () => {
                 <li key={item.id}>{item.name}</li>
             ))}
         </ul>
+        <button onClick={deleteRandom}>Delete item list</button>
     </div>
   )
 }
