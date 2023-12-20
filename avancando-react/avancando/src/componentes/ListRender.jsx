@@ -4,13 +4,28 @@ import {useState} from "react"
 
 const ListRender = () => {
 
-    const [list] = useState(["Ricardo", "Matheus", "Giovana"])
+    const [list] = useState([
+        {
+            name:"Roberto",
+            id: 1
+        },
+
+        {
+            name:"Flavio",
+            id: 2
+        },
+
+        {
+            name:"Giovana",
+            id: 4
+        }
+    ])
 
   return (
     <div>
         <ul>
             {list.map((item) => (
-                <li>{item}</li>
+                <li key={item.id}>{item.name}</li>
             ))}
         </ul>
     </div>

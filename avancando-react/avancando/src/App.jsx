@@ -27,7 +27,7 @@ function App() {
       <ManageData/>
     </div>
 
-    {/*useState na prática*/}
+    {/*Propriedade Key*/}
     <div>
       <ListRender/>
     </div>
