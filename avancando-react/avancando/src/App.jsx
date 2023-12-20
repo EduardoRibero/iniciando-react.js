@@ -7,6 +7,7 @@ import ConditionalRender from "./componentes/ConditionalRender";
 import ShowUserName from "./componentes/ShowUserName";
 import { useState } from "react";
 import CarDetals from "./componentes/CarDetals";
+import Fragment from "./componentes/Fragment";
 
 function App() {
   const veiculos = [
@@ -65,6 +66,11 @@ function App() {
     {veiculos.map((veiculo) =>(
       <CarDetals brand={veiculo.brand} km={veiculo.km} color={veiculo.color}/>
     ))}
+    </div>
+
+    {/*Fragments*/}
+    <div>
+      <Fragment teste="teste"/>
     </div>
 
     </div>
