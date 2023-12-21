@@ -8,6 +8,7 @@ import ShowUserName from "./componentes/ShowUserName";
 import { useState } from "react";
 import CarDetals from "./componentes/CarDetals";
 import Fragment from "./componentes/Fragment";
+import Container from "./componentes/Container";
 
 function App() {
   const veiculos = [
@@ -72,6 +73,14 @@ function App() {
     <div>
       <Fragment teste="teste"/>
     </div>
+
+      {/*Children prop*/}
+      <div>
+        <Container>
+          <p>Algura coisa</p>
+        </Container>
+      </div>
+
 
     </div>
   );
