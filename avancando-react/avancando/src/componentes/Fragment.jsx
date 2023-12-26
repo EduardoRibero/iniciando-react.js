@@ -4,7 +4,7 @@ const Fragment = (propsFragmet) => {
     <>
         <h1>Fragment</h1>
         <h2>titulo</h2>
-        <p>{propsFragmet.teste}</p>
+        <p>{propsFragmet.teste} <hr/> {propsFragmet.id}</p>
     </>
   )
 }

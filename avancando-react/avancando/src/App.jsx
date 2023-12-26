@@ -9,6 +9,7 @@ import { useState } from "react";
 import CarDetals from "./componentes/CarDetals";
 import Fragment from "./componentes/Fragment";
 import Container from "./componentes/Container";
+import ExecuteFunction from "./componentes/ExecuteFunction";
 
 function App() {
   const veiculos = [
@@ -16,6 +17,10 @@ function App() {
     {brand:"uno", km: 92.000, color: "branco"},
     {brand:"corsa", km: 72.000, color: "preto"}
   ]
+
+  function funcao () {
+    console.log("Função executada")
+  }
 
   const name = "tiago"
   const [altura] = useState("1.67")
@@ -71,7 +76,7 @@ function App() {
 
     {/*Fragments*/}
     <div>
-      <Fragment teste="teste"/>
+      <Fragment teste="teste" id="23"/>
     </div>
 
       {/*Children prop*/}
@@ -81,6 +86,8 @@ function App() {
         </Container>
       </div>
 
+      {/* Function props*/}
+      <ExecuteFunction myFunction={funcao}/>
 
     </div>
   );
