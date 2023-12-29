@@ -10,8 +10,16 @@ import CarDetals from "./componentes/CarDetals";
 import Fragment from "./componentes/Fragment";
 import Container from "./componentes/Container";
 import ExecuteFunction from "./componentes/ExecuteFunction";
+import Mensagem from "./componentes/Mensagem"
+import ModificadorMensagem from "./componentes/ModificadorMensagem";
 
 function App() {
+  const[mensagem, setMensagem] = useState("")
+
+  const modifica = (valor) => {
+    setMensagem(valor)
+  }
+
   const veiculos = [
     {brand:"prisma", km: 32.000, color: "vermelho"},
     {brand:"uno", km: 92.000, color: "branco"},
@@ -88,6 +96,11 @@ function App() {
 
       {/* Function props*/}
       <ExecuteFunction myFunction={funcao}/>
+
+      {/*State lift*/}
+      <Mensagem valor={mensagem}/>
+    
+      <ModificadorMensagem modificaMensagem={modifica}/>
 
     </div>
   );
