@@ -12,8 +12,34 @@ import Container from "./componentes/Container";
 import ExecuteFunction from "./componentes/ExecuteFunction";
 import Mensagem from "./componentes/Mensagem"
 import ModificadorMensagem from "./componentes/ModificadorMensagem";
+import UserDetails from "./componentes/UserDetails";
 
 function App() {
+  const objs = [
+    {
+      key: 1,
+      nome: "João", 
+      profissao: "Dentista", 
+      online: true, 
+      idade: 46},
+
+    {
+      key: 2,
+      nome: "Maria", 
+      profissao: "Vendedora", 
+      online: false, 
+      idade: 17}, 
+
+    {
+      key: 3,
+      nome: "Jose", 
+      profissao: "Cozinheiro", 
+      online: true, 
+      idade: 19
+    }
+  ]
+
+
   const[mensagem, setMensagem] = useState("")
 
   const modifica = (valor) => {
@@ -101,6 +127,12 @@ function App() {
       <Mensagem valor={mensagem}/>
     
       <ModificadorMensagem modificaMensagem={modifica}/>
+
+      {/*Desafio Avançando no React*/}
+
+      {objs.map((obj) => (
+        <UserDetails key={obj.key} nome={obj.nome} profissao={obj.profissao} online={obj.online} idade={obj.idade}/>
+      ))}
 
     </div>
   );
